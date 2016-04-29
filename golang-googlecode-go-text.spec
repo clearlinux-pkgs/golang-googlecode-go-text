@@ -1,6 +1,6 @@
 Name     : golang-googlecode-go-text 
 Version  : 0 
-Release  : 3
+Release  : 4
 URL      : https://github.com/golang/text/archive/601048ad6acbab6cedd582db09b8c4839ff25b15.tar.gz
 Source0  : https://github.com/golang/text/archive/601048ad6acbab6cedd582db09b8c4839ff25b15.tar.gz
 Summary  : No detailed summary available
