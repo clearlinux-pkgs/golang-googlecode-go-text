@@ -1,6 +1,6 @@
 Name     : golang-googlecode-go-text 
 Version  : 0 
-Release  : 5
+Release  : 6
 URL      : https://github.com/golang/text/archive/601048ad6acbab6cedd582db09b8c4839ff25b15.tar.gz
 Source0  : https://github.com/golang/text/archive/601048ad6acbab6cedd582db09b8c4839ff25b15.tar.gz
 Summary  : No detailed summary available
@@ -40,27 +40,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
 export GOPATH=%{buildroot}%{gopath}
-go test %{library_path}/cases
-go test %{library_path}/cldr
-go test %{library_path}/collate
-go test %{library_path}/collate/build
-go test %{library_path}/collate/colltab
-go test %{library_path}/currency
-go test %{library_path}/display
-go test %{library_path}/encoding
-go test %{library_path}/encoding/htmlindex
-go test %{library_path}/internal || : 
-go test %{library_path}/internal/colltab
-go test %{library_path}/internal/tag
-go test %{library_path}/internal/triegen
-go test %{library_path}/internal/ucd
-go test %{library_path}/language || :
-go test %{library_path}/runes
-go test %{library_path}/search
-go test %{library_path}/transform
-go test %{library_path}/unicode/norm
-go test %{library_path}/unicode/rangetable
-go test %{library_path}/width
+go test -v -x golang.org/x/text/... || :
 
 %files
 %defattr(-,root,root,-)
